@@ -31,7 +31,7 @@
         const input = document.getElementById("input" + (index + 1));
         const result = document.getElementById("result" + (index + 1));
         const checkButton = document.getElementById("check" + (index + 1));
-        input.addEventListener("input",()=>{
+        input.addEventListener("change",()=>{
           if(input.value === val){
             result.textContent = "正解！";
           }else{
