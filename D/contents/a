@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color:#000000;
+        color:#FFD700;
+      }
+      p.example{color:#FFFFFF;}
+    </style>
+
+    <base target="_top">
+  </head>
+  <body>
+     <h1>クイズ</h1>
+  <p class="example">CSSで文字色を指定するプロパティは？
+    </p>
+    <details> 
+      <summary>答え</summary>
+      <p>colorプロパティ</p>
+    </details>
+<p class="example">CSSで文字サイズ（フォントのサイズ）を指定するプロパティは？
+    </p>
+    <details> 
+      <summary>答え</summary>
+      <p>font-sizeプロパティ</p>
+    </details>
+
+
+  </body>
+</html>
