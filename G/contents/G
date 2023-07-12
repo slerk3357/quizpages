@@ -1,1 +1,15 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <title>QUIZ</title>
+    </head>
+  <body>
+    <h1>問題１</h1>
+    <p>・</p>
+    <details>
+    <summary>答え</summary>
+    <p>?!$%#</p>
+    </details>
+     </body>
+</html>
