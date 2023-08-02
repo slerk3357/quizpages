@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./../favicon.ico">
+    <link rel="stylesheet" href="./../style.css">
+  </head>
+  <body>
+    <script>
+      const quests = [
+        {
+          q:"JavaScriptで数値の「3」はどのように書くか",
+          a:"3"
+        },
+        {
+          q:"JavaScriptで文字列の「3」はどのように書くか",
+          a:"\"3\""
+        }
+      ];
+      quests.forEach((val,index)=>{
+        index = index + 1;
+        const div = document.body.appendChild(document.createElement("div"));
+        const question = div.appendChild(document.createElement("p"));
+        question.textContent = `問題${index} ${val.q}`;
+        const input = div.appendChild(document.createElement("input"));
+        input.type = "text";
+        input.id = `input${index}`;
+        input.value = "";
+        const result = div.appendChild(document.createElement("span"));
+        result.id = `result${index}`;
+        const checkButton = div.appendChild(document.createElement("button"));
+        checkButton.type = "button";
+        checkButton.id = `check${index}`;
+        checkButton.disabled = true;
+        checkButton.textContent = "答え合わせ";
+        input.addEventListener("change",()=>{
+          if(input.value === val.a){
+            result.textContent = "正解！";
+          }else{
+            result.textContent = "不正解";
+          }
+          checkButton.disabled = false;
+        });
+        checkButton.addEventListener("click",()=>{
+          result.textContent = "「" + val.a + "」";
+        });
+      });
+    </script>
+  </body>
+</html>
