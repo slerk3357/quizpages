@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./../favicon.ico">
+    <link rel="stylesheet" href="./../style.css">
+  </head>
+  <body>
+    <div>
+      <p>問題１ 文書のメインコンテンツを表すHTML要素は？</p>
+      <input type="text" id="input1" value="">
+      <span id="result1"></span>
+      <button type="button" id="check1" disabled>答え合わせ</button>
+    </div>
+    <div>
+      <p>問題２ 一般的なセクションを表すHTML要素が「section要素」であるのに対し、内容が1つの独立した記事で、自己完結したセクションを表すHTML要素は？</p>
+      <input type="text" id="input2" value="">
+      <span id="result2"></span>
+      <button type="button" id="check2" disabled>答え合わせ</button>
+    </div>
+    <div>
+      <p>問題３ 画像を埋め込む際に使用される「img要素」において、画像の読み込みをビューポートに表示されるタイミングに遅らせる属性指定は？</p>
+      <input type="text" id="input3" value="">
+      <span id="result3"></span>
+      <button type="button" id="check3" disabled>答え合わせ</button>
+    </div>
+    <script>
+      const quests = [
+        {
+          q:"JavaScriptで変数を宣言するときにつかうキーワードのうち、再代入できないものは？",
+          a:"今回は非公開"
+        },
+        {
+          q:"JavaScriptで変数を宣言するときにつかうキーワードのうち、再代入はできるけど、再宣言できないものは？",
+          a:"今回は非公開"
+        },
+        {
+          q:"JavaScriptで変数を宣言するときにつかうキーワードのうち、再代入も再宣言できるものは？",
+          a:"今回は非公開"
+        },
+        {
+          q:"JavaScriptで変数「tmp」を宣言して数値「3」を代入するプログラムは？"
+          a:"今回は非公開"
+        }
+      ];
+      quests.forEach((val,index)=>{
+        const div = document.body.appendChild(document.createElement("div"));
+        const question = div.appendChild(document.createElement("p"));
+        question.textContent = `問題${index} ${val.q}`;
+        const input = div.appendChild(document.createElement("input"));
+        input.type = "text";
+        input.id = `input${index}`;
+        input.value = "";
+        const result = div.appendChild(document.createElement("span"));
+        result.id = `result${index}`;
+        const checkButton = div.appendChild(document.createElement("button"));
+        checkButton.type = "button";
+        checkButton.id = `check${index}`;
+        checkButton.disabled = true;
+        input.addEventListener("change",()=>{
+          if(input.value === val){
+            result.textContent = "正解！";
+          }else{
+            result.textContent = "不正解";
+          }
+          checkButton.disabled = false;
+        });
+        checkButton.addEventListener("click",()=>{
+          result.textContent = "「" + val + "」";
+        });
+      });
+    </script>
+  </body>
+</html>
