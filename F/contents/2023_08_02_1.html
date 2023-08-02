@@ -7,24 +7,6 @@
     <link rel="stylesheet" href="./../style.css">
   </head>
   <body>
-    <div>
-      <p>問題１ 文書のメインコンテンツを表すHTML要素は？</p>
-      <input type="text" id="input1" value="">
-      <span id="result1"></span>
-      <button type="button" id="check1" disabled>答え合わせ</button>
-    </div>
-    <div>
-      <p>問題２ 一般的なセクションを表すHTML要素が「section要素」であるのに対し、内容が1つの独立した記事で、自己完結したセクションを表すHTML要素は？</p>
-      <input type="text" id="input2" value="">
-      <span id="result2"></span>
-      <button type="button" id="check2" disabled>答え合わせ</button>
-    </div>
-    <div>
-      <p>問題３ 画像を埋め込む際に使用される「img要素」において、画像の読み込みをビューポートに表示されるタイミングに遅らせる属性指定は？</p>
-      <input type="text" id="input3" value="">
-      <span id="result3"></span>
-      <button type="button" id="check3" disabled>答え合わせ</button>
-    </div>
     <script>
       const quests = [
         {
@@ -40,7 +22,7 @@
           a:"今回は非公開"
         },
         {
-          q:"JavaScriptで変数「tmp」を宣言して数値「3」を代入するプログラムは？"
+          q:"JavaScriptで変数「tmp」を宣言して数値「3」を代入するプログラムは？",
           a:"今回は非公開"
         }
       ];
@@ -67,7 +49,7 @@
           checkButton.disabled = false;
         });
         checkButton.addEventListener("click",()=>{
-          result.textContent = "「" + val + "」";
+          result.textContent = "「" + val.a + "」";
         });
       });
     </script>
