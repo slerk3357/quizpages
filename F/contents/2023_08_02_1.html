@@ -40,6 +40,7 @@
         checkButton.type = "button";
         checkButton.id = `check${index}`;
         checkButton.disabled = true;
+        checkButton.textContent = "答え合わせ";
         input.addEventListener("change",()=>{
           if(input.value === val){
             result.textContent = "正解！";
