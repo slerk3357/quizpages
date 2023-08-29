@@ -1,1 +1,8 @@
-
+button{
+      width:80px;
+      margin:10px;
+    }
+    div{
+      width:300px;
+      background-color:red;
+    }
