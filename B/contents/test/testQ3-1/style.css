@@ -2,5 +2,5 @@ header{
   background-color:#FF0000;
 }
 h1{
-   background: linear-gradient(#0000FF, #FF0000);
+   background: linear-gradient(90deg,#0000FF, #FF0000);
 }
