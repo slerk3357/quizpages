@@ -4,4 +4,5 @@ header{
 h1{
   display: flex;
   justify-content: center;
+   background: linear-gradient(90deg, #0000FF, #FF0000);
 }
