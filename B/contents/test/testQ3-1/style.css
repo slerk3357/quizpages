@@ -3,6 +3,7 @@ header{
 }
 h1{
   text-align: center;
+  width: fit-content;
   background: linear-gradient(0deg, #0000FF, #FF0000);
   background: -webkit-linear-gradient(0deg, #0000FF,#FF0000);
   -webkit-background-clip: text;
