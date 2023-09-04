@@ -3,6 +3,7 @@ button{
       margin:10px;
     }
     div{
+          display:inline-block;
       width:300px;
       background-color:blue;
     }
