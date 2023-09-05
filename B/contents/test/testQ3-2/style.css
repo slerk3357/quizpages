@@ -15,14 +15,17 @@ main{
 .top{
   height:75vh;
   background-color:#444;
+  display:block;
 }
 .middle{
   height:75vh;
   background-color:#888;
+  display:block;
 }
 .bottom{
   height:75vh;
   background-color:#ccc;
+  display:block;
 }
 
 
